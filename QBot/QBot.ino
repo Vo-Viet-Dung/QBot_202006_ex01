@@ -72,7 +72,9 @@ void loop() {
        motor1.reverseRun(50);
        motor2.reverseRun(20);
     }
-   ///Nếu không tìm được đường thì đi lùi lại 
+   ///Nếu không tìm được đường thì thực hiện lại thao tác trước đó
+   ///Nếu trước đó rẽ phải thì tiếp tục rẽ phải
+   ///Nếu trước đó rẽ trái thì tiếp tục rẽ trái
     else if(lineFollower1.readSensor1Status()==1 && lineFollower1.readSensor2Status()==1){
       motor1.reverseRun(50);
       motor2.reverseRun(50);
